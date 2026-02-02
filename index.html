@@ -4,38 +4,391 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV</title>
+  <meta name="description" content="Eshaal Rehmatullah - Frontend Developer Portfolio">
+  <meta name="author" content="Eshaal Rehmatullah">
+  <title>Eshaal Rehmatullah | Frontend Developer</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <nav>
+
+  <!-- Navbar -->
+  <nav aria-label="Main navigation">
     <ul>
       <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
-
-      <input type="checkbox" id="theme-toggle" />
-      <label for="theme-toggle">
-        <i class="fa-solid fa-sun"></i>
-        <i class="fa-solid fa-moon"></i>
-      </label>
-      <button> <a href="" download="resume.png">Download CV </a></button>
+      <li>
+        <input type="checkbox" id="theme-toggle" />
+        <label for="theme-toggle">
+          <i class="fa-solid fa-sun"></i>
+          <i class="fa-solid fa-moon"></i>
+        </label>
+      </li>
     </ul>
-
   </nav>
-  <section id="hero"></section>
-  <section id="about"></section>
-  <section id="education"></section>
-  <section id="skills"></section>
-  <section id="projects"></section>
-  <section id="contact"></section>
-  <footer></footer>
 
+  <!-- Main Content -->
+  <main>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section">
+      <div class="container split-layout">
+        <div class="content">
+          <div class="social-links">
+            <a href="https://github.com/EshaalB" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/eshaal-rehmat-3b3b3b3b3/" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://instagram.com/eshaal_dev" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+          <h1>Hi, I'm <span class="highlight">Eshaal Rehmatullah</span></h1>
+          <h2 class="subtitle">Frontend Developer</h2>
+          <div class="btn-group">
+            <a href="assets/Eshaal-Rehmatullah-CV.pdf" download class="btn btn-outline">
+              <i class="fa-solid fa-download"></i>
+              Download CV
+            </a>
+            <a href="#contact" class="btn btn-primary">
+              <i class="fa-solid fa-envelope"></i>
+              Contact Me
+            </a>
+          </div>
+        </div>
+        <div class="image">
+          <img src="images/profile-photo.jpg" alt="Eshaal Rehmatullah" width="500" height="500">
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container split-layout reverse">
+        <div class="image">
+          <img src="images/dark-waves.jpg" alt="About Eshaal Rehmatullah" width="500" height="500" loading="lazy">
+        </div>
+        <div class="content">
+          <h2 class="section-title">About Me</h2>
+          <p class="description">
+            Hi, I'm Eshaal Rehmatullah, a Computer Scien
+            ce student from Lahore. I build websites that look great and
+            work
+            perfectly
+            on every
+            device.
+
+            My main area of expertise is frontend web development. I am proficient in HTML, CSS, and JavaScript with
+            Frameworks like React , and I am
+            passionate about creating
+            responsive and user-friendly websites.
+
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Education Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title center">Skills & Education</h2>
+        <div class="split-layout">
+
+          <!-- Skills -->
+          <div class="content">
+            <h3 class="subsection-title">Technical Skills</h3>
+            <div class="skills-list">
+
+              <div class="skill-item">
+                <div class="skill-header">
+                  <i class="fa-brands fa-html5"></i>
+                  <span>HTML5</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 90%"></div>
+                </div>
+                <span class="skill-percent">90%</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-header">
+                  <i class="fa-brands fa-css3-alt"></i>
+                  <span>CSS3</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%"></div>
+                </div>
+                <span class="skill-percent">85%</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-header">
+                  <i class="fa-brands fa-js"></i>
+                  <span>JavaScript</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 75%"></div>
+                </div>
+                <span class="skill-percent">75%</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-header">
+                  <i class="fa-brands fa-react"></i>
+                  <span>React</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 70%"></div>
+                </div>
+                <span class="skill-percent">70%</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-header">
+                  <i class="fa-brands fa-git-alt"></i>
+                  <span>Git & GitHub</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 80%"></div>
+                </div>
+                <span class="skill-percent">80%</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="content">
+            <h3 class="subsection-title">Education</h3>
+            <div class="education-list">
+
+              <div class="education-item">
+                <div class="education-icon">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="education-content">
+                  <h4>Bachelor in Computer Science</h4>
+                  <p class="institution">FAST National University of Computer and Emerging Sciences</p>
+                  <p class="duration">
+                    <time datetime="2023">2023</time> - <time datetime="2027">2027</time>
+                  </p>
+                  <p class="description">
+                    Studying Web Development, Data Structures, Algorithms, and Software Engineering.
+                  </p>
+                </div>
+              </div>
+
+              <div class="education-item">
+                <div class="education-icon">
+                  <i class="fa-solid fa-school"></i>
+                </div>
+                <div class="education-content">
+                  <h4>Intermediate - ICS </h4>
+                  <p class="institution">Kinnaird College for Women</p>
+                  <p class="duration">
+                    <time datetime="2021">2021</time> - <time datetime="2023">2023</time>
+                  </p>
+                  <p class="description">
+                    Completed ICS with Mathematics, Physics, and Computer Science.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title center">Featured Projects</h2>
+        <div class="grid grid-3">
+
+          <div class="card project-card">
+            <div class="project-image">
+              <img src="images/bear-tales.jpg" alt="Bear Tales" width="400" height="300" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Bear Tales</h3>
+              <p class="description">
+                A comprehensive book discovery platform to find books and get personalized
+                reading suggestions using HTML, CSS, JavaScript, and APIs.
+              </p>
+              <div class="btn-group">
+                <a href="https://github.com/EshaalB/Bear-Tales" class="btn btn-small" target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="fa-solid fa-eye"></i> Demo
+                </a>
+                <a href="https://github.com/EshaalB/Bear-Tales" class="btn btn-small btn-outline" target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card project-card">
+            <div class="project-image">
+              <img src="images/candy-crush.jpg" alt="Candy Crush Clone" width="400" height="300" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Candy Crush Clone</h3>
+              <p class="description">
+                C++ implementation of complex matching algorithms and memory-efficient game
+                state management with focus on Algorithm Design and Memory Management.
+              </p>
+              <div class="btn-group">
+                <a href="https://github.com/EshaalB/Candy-Crush" class="btn btn-small" target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="fa-solid fa-eye"></i> Demo
+                </a>
+                <a href="https://github.com/EshaalB/Candy-Crush" class="btn btn-small btn-outline" target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card project-card">
+            <div class="project-image">
+              <img src="images/wacky-wings.jpg" alt="Wacky Wings" width="400" height="300" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Wacky Wings</h3>
+              <p class="description">
+                High-performance arcade game built with Assembly Language, optimizing
+                low-level hardware interaction for maximum efficiency and speed.
+              </p>
+              <div class="btn-group">
+                <a href="https://github.com/EshaalB/WackyWings" class="btn btn-small" target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="fa-solid fa-eye"></i> Demo
+                </a>
+                <a href="https://github.com/EshaalB/WackyWings" class="btn btn-small btn-outline" target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title center">Get In Touch</h2>
+        <p class="description center">
+          Have a project in mind or want to collaborate? Feel free to reach out!
+        </p>
+
+        <div class="split-layout">
+
+          <!-- Contact Info -->
+          <div class="content contact-info">
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <h3>Email</h3>
+                <p><a href="mailto:eshaalrehmatullah@gmail.com">eshaalrehmatullah@gmail.com</a></p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div>
+                <h3>GitHub</h3>
+                <p><a href="https://github.com/EshaalB" target="_blank">github.com/EshaalB</a></p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <h3>Location</h3>
+                <p>Lahore, Punjab, Pakistan</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <form class="contact-form" action="mailto:eshaalrehmatullah@gmail.com" method="post" enctype="text/plain">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              <i class="fa-solid fa-paper-plane"></i>
+              Send Message
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-section">
+        <p>&copy; <time datetime="2026">2026</time> Eshaal Rehmatullah. All rights reserved.</p>
+      </div>
+      <div class="footer-section">
+        <p>Built with <i class="fa-solid fa-heart"></i> using HTML & CSS</p>
+      </div>
+      <div class="footer-section">
+        <div class="social-links">
+          <a href="https://github.com/EshaalB" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/eshaal-rehmat-3b3b3b3b3/" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://instagram.com/eshaal_dev" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 </body>
 
