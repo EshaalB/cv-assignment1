@@ -19,6 +19,10 @@
 
   <!-- Navbar -->
   <nav aria-label="Main navigation">
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+    <label for="menu-toggle" class="menu-label">
+      <i class="fa-solid fa-bars"></i>
+    </label>
     <ul>
       <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -58,17 +62,21 @@
           <h2 class="subtitle">Frontend Developer</h2>
           <div class="btn-group">
             <a href="assets/Eshaal-Rehmatullah-CV.pdf" download class="btn btn-outline">
-              <i class="fa-solid fa-download"></i>
-              Download CV
+              <span>
+                <i class="fa-solid fa-download"></i>
+                Download CV
+              </span>
             </a>
             <a href="#contact" class="btn btn-primary">
-              <i class="fa-solid fa-envelope"></i>
-              Contact Me
+              <span>
+                <i class="fa-solid fa-envelope"></i>
+                Contact Me
+              </span>
             </a>
           </div>
         </div>
         <div class="image">
-          <img src="images/profile-photo.jpg" alt="Eshaal Rehmatullah" width="500" height="500">
+          <img src="images/eshaalidev.jpg" alt="Eshaal Rehmatullah" width="500" height="500">
         </div>
       </div>
     </section>
@@ -76,8 +84,23 @@
     <!-- About Section -->
     <section id="about" class="section">
       <div class="container split-layout reverse">
-        <div class="image">
-          <img src="images/dark-waves.jpg" alt="About Eshaal Rehmatullah" width="500" height="500" loading="lazy">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">2+</span>
+            <span class="stat-label">Years Learning</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">GitHub Commits</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Technologies Mastered</span>
+          </div>
         </div>
         <div class="content">
           <h2 class="section-title">About Me</h2>
@@ -221,7 +244,7 @@
 
           <div class="card project-card">
             <div class="project-image">
-              <img src="images/bear-tales.jpg" alt="Bear Tales" width="400" height="300" loading="lazy">
+              <img src="images/proj3.png" alt="Bear Tales" width="400" height="300" loading="lazy">
             </div>
             <div class="card-content">
               <h3>Bear Tales</h3>
@@ -232,11 +255,15 @@
               <div class="btn-group">
                 <a href="https://github.com/EshaalB/Bear-Tales" class="btn btn-small" target="_blank"
                   rel="noopener noreferrer">
-                  <i class="fa-solid fa-eye"></i> Demo
+                  <span>
+                    <i class="fa-solid fa-eye"></i> Demo
+                  </span>
                 </a>
                 <a href="https://github.com/EshaalB/Bear-Tales" class="btn btn-small btn-outline" target="_blank"
                   rel="noopener noreferrer">
-                  <i class="fa-brands fa-github"></i> Code
+                  <span>
+                    <i class="fa-brands fa-github"></i> Code
+                  </span>
                 </a>
               </div>
             </div>
@@ -244,7 +271,7 @@
 
           <div class="card project-card">
             <div class="project-image">
-              <img src="images/candy-crush.jpg" alt="Candy Crush Clone" width="400" height="300" loading="lazy">
+              <img src="images/proj2.png" alt="Candy Crush Clone" width="400" height="300" loading="lazy">
             </div>
             <div class="card-content">
               <h3>Candy Crush Clone</h3>
@@ -255,11 +282,15 @@
               <div class="btn-group">
                 <a href="https://github.com/EshaalB/Candy-Crush" class="btn btn-small" target="_blank"
                   rel="noopener noreferrer">
-                  <i class="fa-solid fa-eye"></i> Demo
+                  <span>
+                    <i class="fa-solid fa-eye"></i> Demo
+                  </span>
                 </a>
                 <a href="https://github.com/EshaalB/Candy-Crush" class="btn btn-small btn-outline" target="_blank"
                   rel="noopener noreferrer">
-                  <i class="fa-brands fa-github"></i> Code
+                  <span>
+                    <i class="fa-brands fa-github"></i> Code
+                  </span>
                 </a>
               </div>
             </div>
@@ -267,7 +298,7 @@
 
           <div class="card project-card">
             <div class="project-image">
-              <img src="images/wacky-wings.jpg" alt="Wacky Wings" width="400" height="300" loading="lazy">
+              <img src="images/proj1.png" alt="Wacky Wings" width="400" height="300" loading="lazy">
             </div>
             <div class="card-content">
               <h3>Wacky Wings</h3>
@@ -278,11 +309,15 @@
               <div class="btn-group">
                 <a href="https://github.com/EshaalB/WackyWings" class="btn btn-small" target="_blank"
                   rel="noopener noreferrer">
-                  <i class="fa-solid fa-eye"></i> Demo
+                  <span>
+                    <i class="fa-solid fa-eye"></i> Demo
+                  </span>
                 </a>
                 <a href="https://github.com/EshaalB/WackyWings" class="btn btn-small btn-outline" target="_blank"
                   rel="noopener noreferrer">
-                  <i class="fa-brands fa-github"></i> Code
+                  <span>
+                    <i class="fa-brands fa-github"></i> Code
+                  </span>
                 </a>
               </div>
             </div>
@@ -336,25 +371,30 @@
           </div>
 
           <!-- Contact Form -->
-          <form class="contact-form" action="mailto:eshaalrehmatullah@gmail.com" method="post" enctype="text/plain">
+          <form class="contact-form"
+            action="mailto:eshaalrehmatullah@gmail.com?subject=Contact%20Inquiry%20from%20Portfolio" method="post"
+            enctype="text/plain" target="_blank">
             <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" placeholder="John Doe" required autocomplete="name">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="Name" placeholder="Your Name" required>
             </div>
 
             <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="john@example.com" required autocomplete="email">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="Email" placeholder="Your Email" required>
             </div>
 
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+              <textarea id="message" name="Message" rows="5" placeholder="Write your message here..."
+                required></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary">
-              <i class="fa-solid fa-paper-plane"></i>
-              Send Message
+              <span>
+                <i class="fa-solid fa-paper-plane"></i>
+                Send Message
+              </span>
             </button>
           </form>
 
@@ -366,26 +406,20 @@
 
   <!-- Footer -->
   <footer>
-    <div class="container footer-content">
-      <div class="footer-section">
-        <p>&copy; <time datetime="2026">2026</time> Eshaal Rehmatullah. All rights reserved.</p>
-      </div>
-      <div class="footer-section">
-        <p>Built with <i class="fa-solid fa-heart"></i> using HTML & CSS</p>
-      </div>
-      <div class="footer-section">
-        <div class="social-links">
-          <a href="https://github.com/EshaalB" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <i class="fa-brands fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/eshaal-rehmat-3b3b3b3b3/" target="_blank" rel="noopener noreferrer"
-            aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a href="https://instagram.com/eshaal_dev" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-        </div>
+    <div class="footer-content">
+      <p>&copy; <time datetime="2026">2026</time> Eshaal Rehmatullah. All rights reserved.</p>
+      <p>Built with <i class="fa-solid fa-heart"></i></p>
+      <div class="social-links">
+        <a href="https://github.com/EshaalB" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/eshaal-rehmat-3b3b3b3b3/" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://instagram.com/eshaal_dev" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
       </div>
     </div>
   </footer>
