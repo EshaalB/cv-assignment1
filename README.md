@@ -21,4 +21,4 @@ Terminal-themed personal portfolio website.The design is inspired by the  Linux 
 - Responsive for Mobile & Desktop
 
 **Live Link**
-- Vercel:
+- Vercel:https://cv-assignment1.vercel.app

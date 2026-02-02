@@ -799,6 +799,18 @@ img {
 
   #contact .split-layout {
     flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .contact-form {
+    padding: 20px;
+    padding-top: 50px;
+    width: 100%;
+  }
+
+  .contact-info {
+    width: 100%;
   }
 
   .footer-content {
