@@ -1,3 +1,4 @@
+/* --- Global Variables --- */
 :root {
   color-scheme: light dark;
   --bg: #dbe2f5;
@@ -8,7 +9,6 @@
   --card-bg: rgba(146, 150, 196, 0.4);
   --input-bg: rgba(219, 226, 245, 0.6);
   --border: rgba(60, 64, 124, 0.2);
-  --glow-primary: rgba(60, 64, 124, 0.3);
   --grid-line: rgba(60, 64, 124, 0.08);
 }
 
@@ -22,11 +22,11 @@
     --card-bg: rgba(30, 37, 64, 0.7);
     --input-bg: rgba(10, 17, 36, 0.8);
     --border: rgba(131, 135, 195, 0.3);
-    --glow-primary: rgba(131, 135, 195, 0.4);
     --grid-line: rgba(131, 135, 195, 0.08);
   }
 }
 
+/* --- Global Reset & Body --- */
 * {
   margin: 0;
   padding: 0;
@@ -43,6 +43,20 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* --- Layout & Typography --- */
 .container {
   max-width: 1200px;
   width: 100%;
@@ -61,20 +75,18 @@ section {
 
 .section-title::before {
   content: "# ";
-  opacity: 0.5;
-}
-
-.subsection-title {
-  font-size: 1.5rem;
-  color: var(--primary);
-  margin-bottom: 1.5rem;
 }
 
 .subsection-title::before {
   content: "## ";
+}
+
+.section-title::before,
+.subsection-title::before {
   opacity: 0.5;
 }
 
+/* --- Theme Toggle --- */
 #theme-toggle,
 .menu-checkbox {
   display: none;
@@ -96,7 +108,7 @@ label[for="theme-toggle"] {
   display: flex;
   align-items: center;
   padding: 5px;
-  transition: opacity 0.3s;
+  padding: 5px;
 }
 
 label[for="theme-toggle"]:hover {
@@ -113,6 +125,7 @@ label[for="theme-toggle"] .fa-sun,
   display: inline-block;
 }
 
+/* --- Navigation --- */
 nav {
   margin: 15px auto;
   padding: 0 15px;
@@ -122,30 +135,45 @@ nav {
   width: max-content;
 }
 
+nav::after,
+.stat-card,
+.education-item,
+.contact-form {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+}
+
 nav::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: var(--card-bg);
   backdrop-filter: blur(8px);
-  border: 1px solid var(--border);
   z-index: -1;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
   gap: 15px;
   align-items: center;
   padding: 10px 0;
 }
 
+nav ul li a,
+.btn,
+button,
+.btn span,
+button span,
+.stat-card,
+.form-group input,
+.form-group textarea,
+.info-item a,
+label[for="theme-toggle"] {
+  transition: all 0.3s ease;
+}
+
 nav ul li a {
-  text-decoration: none;
-  color: var(--text);
   font-size: 14px;
   padding: 6px 12px;
-  transition: all 0.2s ease;
   display: flex;
   align-items: center;
 }
@@ -166,6 +194,7 @@ nav ul li a:hover::before {
   color: var(--secondary);
 }
 
+/* --- Hero Section --- */
 #hero {
   display: flex;
   align-items: center;
@@ -188,7 +217,7 @@ nav ul li a:hover::before {
 }
 
 .content h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: 5vw;
   margin-bottom: 10px;
   line-height: 1.2;
 }
@@ -266,7 +295,6 @@ nav ul li a:hover::before {
 
 .btn,
 button {
-  box-sizing: border-box;
   padding: 12px 24px;
   display: inline-flex;
   align-items: center;
@@ -277,16 +305,13 @@ button {
   background: var(--primary);
   border: 1px solid var(--primary);
   cursor: pointer;
-  transition: all 0.3s ease;
   overflow: hidden;
-  text-decoration: none;
   gap: 10px;
 }
 
 .btn span,
 button span {
   letter-spacing: 1.2px;
-  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -312,6 +337,7 @@ button:focus {
   color: var(--bg);
 }
 
+/* --- Stats Section --- */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -320,11 +346,8 @@ button:focus {
 }
 
 .stat-card {
-  background: var(--card-bg);
   padding: 25px;
-  border: 1px solid var(--border);
   text-align: center;
-  transition: all 0.3s ease;
 }
 
 .stat-card:hover {
@@ -346,6 +369,7 @@ button:focus {
   letter-spacing: 1px;
 }
 
+/* --- Education Section --- */
 .education-list {
   display: flex;
   flex-direction: column;
@@ -356,9 +380,7 @@ button:focus {
 .education-item {
   display: flex;
   gap: 20px;
-  background: var(--card-bg);
   padding: 20px;
-  border: 1px solid var(--border);
   position: relative;
   transition: border-color 0.3s;
 }
@@ -392,6 +414,7 @@ button:focus {
   display: block;
 }
 
+/* --- Skills Section --- */
 .skill-item {
   margin-bottom: 25px;
 }
@@ -437,6 +460,7 @@ button:focus {
   margin-top: 4px;
 }
 
+/* --- Projects Section --- */
 .grid {
   display: grid;
   gap: 30px;
@@ -457,8 +481,6 @@ button:focus {
   display: flex;
   flex-direction: column;
 }
-
-
 
 .project-image {
   height: 200px;
@@ -502,6 +524,7 @@ button:focus {
   margin-bottom: 15px;
 }
 
+/* --- Contact Section --- */
 #contact .split-layout {
   gap: 60px;
   align-items: flex-start;
@@ -514,9 +537,7 @@ button:focus {
 
 .contact-form {
   flex: 2;
-  background: var(--card-bg);
   padding: 55px 40px 40px;
-  border: 1px solid var(--border);
   position: relative;
 }
 
@@ -564,7 +585,6 @@ button:focus {
   font-size: 0.95rem;
   color: var(--text);
   outline: none;
-  transition: all 0.3s ease;
 }
 
 .form-group input::placeholder,
@@ -627,8 +647,6 @@ button:focus {
 }
 
 .info-item a {
-  color: var(--text);
-  text-decoration: none;
   transition: color 0.3s;
 }
 
@@ -636,6 +654,7 @@ button:focus {
   color: var(--primary);
 }
 
+/* --- Footer --- */
 footer {
   background: var(--primary);
   color: var(--bg);
@@ -649,10 +668,10 @@ footer p {
   margin: 0;
 }
 
-img {
-  max-width: 100%;
-}
+/* --- Images --- */
 
+
+/* --- Media Queries --- */
 @media (max-width: 992px) {
   .split-layout {
     gap: 30px;
@@ -668,7 +687,6 @@ img {
     padding: 0;
     width: 60px;
     height: 60px;
-    justify-content: center;
   }
 
   nav::before {
@@ -729,7 +747,7 @@ img {
     justify-content: center;
   }
 
-  .section {
+  section {
     padding: 60px 5%;
   }
 
